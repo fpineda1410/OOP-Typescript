@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,6 +14,7 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+exports.__esModule = true;
 //"use strict";
 var BasicCalculation = /** @class */ (function () {
     function BasicCalculation(params) {
@@ -26,6 +28,7 @@ var BasicCalculation = /** @class */ (function () {
         }
         catch (error) {
             console.log("Arguments are not enough!");
+            return 0;
         }
     };
     BasicCalculation.prototype.run = function () {
@@ -44,7 +47,9 @@ var ParallelTask = /** @class */ (function (_super) {
         return this.more_numbers[0] * this.more_numbers[1];
     };
     ParallelTask.prototype.run = function () {
+        _super.prototype.run.call(this);
         console.log("el segundo bichito");
     };
     return ParallelTask;
 }(BasicCalculation));
+exports["default"] = ParallelTask;

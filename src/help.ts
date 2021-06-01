@@ -14,7 +14,9 @@ class BasicCalculation {
             return this.number1[0] + this.number1[1] + this.number1[2];
         }catch(error:unknown){
             console.log("Arguments are not enough!")
+            return 0;
         }
+        
     }
 
     run ():void {
@@ -22,7 +24,7 @@ class BasicCalculation {
     }
 
 }
-class ParallelTask extends BasicCalculation {
+export default class ParallelTask extends BasicCalculation {
 
     more_numbers:Array<number>;
 
@@ -36,6 +38,7 @@ class ParallelTask extends BasicCalculation {
     }
 
     run ():void {
+        super.run();
         console.log ("el segundo bichito")
     }
 }
