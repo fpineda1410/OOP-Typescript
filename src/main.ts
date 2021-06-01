@@ -1,5 +1,6 @@
+"use strict";
 
-
+import {ParallelTask} from "./help"
 
 class BasicClass {
     name: string;
@@ -7,7 +8,7 @@ class BasicClass {
 
     constructor(name: string, lastName: string){
         this.name = name;
-        this.lastName=lastName;
+        this.lastName = lastName;
     }
 
     completeName():string{
@@ -17,6 +18,6 @@ class BasicClass {
 
 
 let myName:BasicClass = new BasicClass ('el','bicho');
-
 console.log (myName.completeName());
+
 

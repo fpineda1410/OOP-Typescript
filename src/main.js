@@ -1,3 +1,5 @@
+"use strict";
+exports.__esModule = true;
 var BasicClass = /** @class */ (function () {
     function BasicClass(name, lastName) {
         this.name = name;
